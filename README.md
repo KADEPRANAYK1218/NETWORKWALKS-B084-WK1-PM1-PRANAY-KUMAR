@@ -1,248 +1,220 @@
-::: {align="center"}
-# 🔐 Cybersecurity Lab Environment Setup
+<div align="center">
 
-**Building a virtual lab for cybersecurity, penetration-testing, and
-ethical-hacking practice**
+# 🔐 Cybersecurity & Penetration Testing Lab Setup
 
-**Author: K. Pranay Kumar**\
-**Program: Cybersecurity at Networkwalks \| Batch B084 \| Week 01**
-:::<p align="center">
-<img src="https://img.shields.io/badge/Project-Cybersecurity-404040?style=flat-square&labelColor=C00000" />{=html}
-<img src="https://img.shields.io/badge/Platform-VirtualBox-0070C0?style=flat-square&labelColor=000000" />{=html}
-<img src="https://img.shields.io/badge/OS-Kali%20Linux-E87500?style=flat-square&labelColor=000000&logo=kalilinux&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/Networking-NAT%20Network-238F89?style=flat-square&labelColor=000000" />{=html}
-<img src="https://img.shields.io/badge/Focus-Ethical%20Hacking-C00000?style=flat-square&labelColor=000000" />{=html}
-<img src="https://img.shields.io/badge/Batch-B084-404040?style=flat-square&labelColor=C00000" />{=html}
-</p>
-📌 Project Overview
-This project documents the setup of a virtual cybersecurity lab using
-Oracle VirtualBox and Kali Linux as part of the Cybersecurity
-Program at Networkwalks, Batch B084.
+### Networkwalks Cybersecurity Program · Batch B084 · Week 01
 
-The aim is to prepare a controlled virtual environment for learning
-cybersecurity fundamentals, Linux networking, and authorized
-penetration-testing practice. The lab can be extended later by adding
-other virtual machines for safe, permission-based testing.
-🎯 Objectives
-The main objectives of this project are to:
-- Set up and launch Kali Linux in a virtual machine.
-- Configure a private VirtualBox NAT Network.
-- Configure IPv4 settings for the Kali Linux network connection.
-- Review the IP address, subnet mask, gateway, and DNS configuration.
-- Manage the network connection using NetworkManager commands.
-- Test network connectivity and DNS resolution.
-- Create a clean virtual-machine snapshot for recovery.
-- Document the process using screenshots and clear steps.
-🛡️ Purpose of the Lab
-A virtual lab provides a convenient environment to learn and practise
-cybersecurity without directly testing systems that are not owned by the
-learner.
+A practical lab documenting Kali Linux setup, VirtualBox networking, IPv4 configuration, NetworkManager connection management, and virtual-machine snapshot handling.
 
-Possible future learning activities include:
-- Network reconnaissance in an authorized lab.
-- Port scanning of lab machines.
-- Network traffic analysis.
-- Vulnerability assessment in a controlled environment.
-- Learning Linux security tools.
-- Practising secure configuration and troubleshooting.
-⚠️ Responsible use: Only test systems and networks you own or have
-explicit permission to assess. Keep practice within your controlled
-lab environment.
+![Project](https://img.shields.io/badge/Project-Cybersecurity-8B0000?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Oracle%20VirtualBox-1F6FEB?style=for-the-badge)
+![Operating System](https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Ethical%20Hacking-238636?style=for-the-badge)
 
-🏗️ Lab Architecture
-The lab uses Kali Linux as a virtual machine running through VirtualBox.
-The virtual network is configured separately from the physical network
-and can be expanded with additional lab machines later.
-                 Host Computer
-                      |
-                 VirtualBox
-                      |
-              Virtual NAT Network
-                 10.0.0.0/24
-                      |
-                Kali Linux VM
-                 10.0.0.2/24
-                      |
-           Gateway / DNS shown in
-             the configuration:
-                  10.0.0.1
-The diagram represents the configuration shown in the provided
-screenshot. Confirm the VirtualBox NAT Network settings and actual
-connectivity tests before relying on this configuration.
+**Author:** K. Pranay Kumar
 
-⚙️ Lab Configuration
-  Component                        Configuration shown / used
-  Virtualization platform          Oracle VirtualBox
-Security operating system        Kali Linux
-Virtual network mode             NAT Network
-IPv4 configuration method        Manual
-Kali IPv4 address                10.0.0.2
-Prefix length                    /24
-Subnet mask                      255.255.255.0
-Gateway                          10.0.0.1
-DNS server shown in screenshot   10.0.0.1
-Network connection name          Wired connection 1
+</div>
 
-Note: Use the address range, gateway, and DNS server that match your
-own VirtualBox network. The values above are taken from the supplied
-IPv4 configuration screenshot.
-🪜 Lab Setup Procedure
-Step 1. Prepare VirtualBox and Kali Linux
-VirtualBox is used to run Kali Linux in a virtual machine. Start the
-Kali Linux VM and check that the desktop loads correctly.
+---
 
-Evidence: screenshots/01-kali-linux-desktop.png
-Step 2. Configure the Virtual Network
-Create or select a VirtualBox NAT Network for the lab. Confirm its
-network prefix and DHCP settings in VirtualBox before assigning a manual
-IP address.
+## 📌 Overview
 
-A NAT Network can allow virtual machines attached to the same network to
-communicate with each other and, when configured appropriately, access
-external networks through NAT.
-Step 3. Configure IPv4 Settings
-The supplied screenshot shows the following manual IPv4 configuration:
-Address:    10.0.0.2
-Prefix:     24
-Gateway:    10.0.0.1
-DNS server: 10.0.0.1
-Evidence: screenshots/02-ipv4-network-configuration.png
-Step 4. Reactivate the Network Connection
-The terminal screenshot shows these commands being used to update and
-reactivate the NetworkManager connection:
+This project documents the setup and configuration of a virtual cybersecurity lab using **Oracle VirtualBox** and **Kali Linux**. The objective is to prepare a controlled virtual environment for learning Linux networking fundamentals and practising cybersecurity techniques responsibly.
+
+The repository includes screenshots of the Kali Linux environment, VirtualBox virtual-machine configuration, snapshot management, IPv4 settings, network-connection verification, and a browser session.
+
+## 🎯 Objectives
+
+- Set up and launch a Kali Linux virtual machine in Oracle VirtualBox.
+- Review the virtual-machine configuration.
+- Use a VirtualBox NAT Network for virtual lab networking.
+- Configure and review IPv4 address, prefix, gateway, and DNS settings.
+- Manage a network connection using NetworkManager (`nmcli`).
+- Identify commands used to check network configuration and connectivity.
+- Review VirtualBox snapshot management for recovery.
+- Document the setup with labelled screenshots.
+
+## 🧰 Tools and Technologies
+
+| Tool / Technology | Purpose |
+|---|---|
+| Oracle VirtualBox | Runs the Kali Linux virtual machine |
+| Kali Linux | Linux environment for cybersecurity learning |
+| NetworkManager (`nmcli`) | Manages and reactivates network connections |
+| VirtualBox NAT Network | Provides networking for connected virtual machines, depending on configuration |
+| IPv4 | Addressing and routing configuration |
+
+## 🏗️ Lab Architecture
+
+```text
+Host Computer
+     |
+Oracle VirtualBox
+     |
+Virtual Network (NAT Network)
+     |
+Kali Linux Virtual Machine
+     |
+IPv4 configuration and network checks
+```
+
+## ⚙️ Network Configuration
+
+The following values are visible in the supplied network-configuration screenshot. They describe that example setup and may not match another computer or VirtualBox network.
+
+| Setting | Value shown |
+|---|---|
+| IPv4 address | `10.0.0.2` |
+| Prefix length | `/24` |
+| Subnet mask | `255.255.255.0` |
+| Gateway | `10.0.0.1` |
+| DNS server | `10.0.0.1` |
+| Connection name shown | `Wired connection 1` |
+
+> **Important:** Confirm the subnet, gateway, and DNS settings in your own VirtualBox NAT Network before using these values. Do not copy them blindly into another network.
+
+## 🪜 Work Documented
+
+### 1. Kali Linux virtual machine
+
+Kali Linux is shown in the virtual environment. The screenshots document the login screen and desktop environment.
+
+### 2. VirtualBox configuration and snapshots
+
+The screenshots show the virtual-machine configuration and the VirtualBox snapshot-management interface. A snapshot can provide a recovery point, but verify its state in VirtualBox before relying on it.
+
+### 3. IPv4 network configuration
+
+The network configuration screenshot shows a manual IPv4 address, prefix, gateway, and DNS server.
+
+### 4. Network connection management
+
+The terminal screenshot is associated with these NetworkManager commands:
+
+```bash
 sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
 sudo nmcli connection down "Wired connection 1"
 sudo nmcli connection up "Wired connection 1"
-The visible terminal output reports that the connection was deactivated
-and then activated successfully.
+```
 
-Evidence: screenshots/03-network-connection-reactivated.png
-The successful activation message confirms that the connection was
-brought up. It does not, by itself, prove internet connectivity or
-successful DNS resolution.
+A connection activation message confirms that the connection was brought up; it does **not by itself** prove internet access or successful DNS resolution.
 
-Step 5. Verify Network Connectivity and DNS
-Run the following commands in Kali Linux and review their actual output:
+## 🔎 Verification Commands
+
+Run these commands in Kali Linux and review the actual output:
+
+```bash
 ip addr
 ip route
 ping -c 4 10.0.0.1
 ping -c 4 1.1.1.1
 getent hosts kali.org
-- ip addr displays network interface addresses.
-- ip route displays routing information.
-- The gateway ping checks whether the configured gateway responds.
-- The external IP ping tests external reachability when permitted.
-- getent hosts kali.org checks hostname resolution through the
-  system's configured name-service setup.
-Network policies can block some tests. Record the real output and do not
-mark a test as successful unless it passes.
+nmcli connection show --active
+```
 
-Evidence to add:
-screenshots/04-connectivity-and-dns-verification.png
-Step 6. Create a Clean Virtual-Machine Snapshot
-After verifying the lab configuration, create a VirtualBox snapshot so
-the VM can be restored to a known baseline before future experiments.
+- `ip addr` — displays interface addresses.
+- `ip route` — displays routing information.
+- `ping -c 4 10.0.0.1` — tests gateway reachability if ICMP is allowed.
+- `ping -c 4 1.1.1.1` — tests external IP reachability if permitted.
+- `getent hosts kali.org` — checks hostname resolution.
+- `nmcli connection show --active` — lists active NetworkManager connections.
 
-Suggested snapshot name:
-Clean Kali - Network Setup
-Evidence to add: screenshots/05-virtualbox-vm-snapshot.png
+Network or firewall policies may block some checks. Only report a test as successful after checking its output. The screenshots currently in the repository should not be treated as proof that every verification command passed.
 
-Only include this step as completed after confirming that the snapshot
-exists.
-🔎 Lab Verification Checklist
-  Test                    Command / action                   What to check
-  IP address              ip addr                          Expected IPv4 address
-is shown
+## 📸 Screenshots and Evidence
 
-  Default route           ip route                         Expected
-gateway/default route
-is present
+The images below use the **existing filenames in this repository**. Each screenshot has a title and a short description.
 
-  Gateway reachability    ping -c 4 10.0.0.1               Replies are received,
-if ICMP is allowed
+### 1. Kali Linux Login Page
 
-  External connectivity   ping -c 4 1.1.1.1                Replies are received,
-if external ICMP is
-allowed
+![Kali Linux Login Page](01-Screenshot-Kali%20Linux%20Login%20Page.png)
 
-  DNS resolution          getent hosts kali.org            A hostname address is
-returned
+*Shows the Kali Linux login screen before entering the desktop environment.*
 
-  Network connection      nmcli connection show --active   The intended connection
-is active
-Snapshot                Check VirtualBox Snapshots         The baseline snapshot
-is listed
-🐞 Troubleshooting Notes
-Network connection does not work after configuration
-If the connection fails after changing IPv4 settings:
-1. Confirm the IP address and prefix match the NAT Network.
-2. Check that the gateway is correct.
-3. Check the active connection name using:
-   nmcli connection show
-4. Review the active connection and route:
-   nmcli connection show --active
-   ip route
-5. Reactivate the correct connection if appropriate:
-   sudo nmcli connection down "Wired connection 1"
-   sudo nmcli connection up "Wired connection 1"
-Connection names may differ on other systems. Use the name shown on your
-own machine.
-💡 What I Learned
-Through this project, I practised and explored:
-1. Virtualization
-VirtualBox allows an operating system such as Kali Linux to run inside a
-virtual machine.
-2. NAT Network
-A NAT Network provides a way to connect multiple VMs to the same virtual
-network while supporting network address translation for outbound
-access, depending on its configuration.
-3. IPv4 Configuration
-I worked with IP addresses, subnet prefixes, gateways, and DNS server
-settings.
-4. NetworkManager
-I used nmcli to modify and reactivate a network connection from the
-terminal.
-5. Verification and Documentation
-I learned the importance of checking command output, saving screenshots,
-and documenting both configuration steps and test results.
-6. Recovery Planning
-A clean VM snapshot can provide a baseline to return to before carrying
-out later experiments.
-📸 Screenshots
-Place your genuine project screenshots in a folder named screenshots
-and use descriptive filenames:
-  Filename                                     Description
-  01-kali-linux-desktop.png                  Kali Linux desktop
+### 2. VirtualBox VM Configuration
 
-  02-ipv4-network-configuration.png          Manual IPv4 settings
+![VirtualBox VM Configuration](02-Screenshot-virtualbox-vm-configuration.png)
 
-  03-network-connection-reactivated.png      Terminal showing connection
-activation
+*Shows the virtual-machine configuration in Oracle VirtualBox.*
 
-  04-connectivity-and-dns-verification.png   Connectivity and DNS test results
---- capture this after testing
-05-virtualbox-vm-snapshot.png              VirtualBox snapshot --- capture
-this if created
-The browser/news screenshot is not recommended as evidence for this
-particular lab because it does not show network configuration or
-verification.
-🔐 Security and Ethical Use
-This project is intended for educational purposes and authorized
-testing. Always obtain permission before testing any system or network.
-Keep future penetration-testing exercises inside your own lab or another
-explicitly authorized environment.
-🔗 Tools and Resources
-- VirtualBox Downloads
-- Kali Linux --- Get Kali
-- Kali Linux Documentation
-👤 Author
-K. Pranay Kumar
-Cybersecurity Program --- Networkwalks
-Batch: B084
-Project: Week 01 --- Cybersecurity & Pentesting Lab Setup
-📌 Project Information
-- Program: Cybersecurity at Networkwalks
-- Batch: B084
-- Week: 01
-- Project: Cybersecurity & Pentesting Lab Setup
-- Primary tools: VirtualBox and Kali Linux
+### 3. Kali Linux Snapshot Management
+
+![Kali Linux Snapshot Management](03-Screenshot-kali-linux-snapshot-management.png)
+
+*Shows the VirtualBox snapshot-management view for the Kali Linux virtual machine.*
+
+### 4. Kali Linux Desktop
+
+![Kali Linux Desktop](04-Screenshot-kali%20linux.png)
+
+*Shows the Kali Linux desktop environment after the virtual machine has started.*
+
+### 5. Kali Linux Network Configuration
+
+![Kali Linux Network Configuration](05-Screenshot-kali-linux-network-configuration.png)
+
+*Shows the manual IPv4 network settings, including address, prefix, gateway, and DNS.*
+
+### 6. Network Connection Verification
+
+![Network Connection Verification](06-Screenshot-network-connection-verification.png)
+
+*Shows terminal activity related to managing or verifying the network connection. Run the verification commands above and capture their results separately if you need evidence of connectivity and DNS tests.*
+
+### 7. Kali Linux Firefox Browser
+
+![Kali Linux Firefox Browser](07-Screenshot-kali-linux-firefox-browser.png.png)
+
+*Shows Firefox running inside Kali Linux. This is general desktop evidence, not proof of successful network configuration.*
+
+## 💡 Learning Outcomes
+
+Through this lab, I practised and explored:
+
+- Working with a virtual machine in Oracle VirtualBox.
+- Understanding the purpose of a NAT Network in a virtual lab.
+- Reviewing IPv4 addresses, prefixes, gateways, and DNS settings.
+- Managing a network connection using `nmcli`.
+- Identifying commands for checking routes, connectivity, and DNS.
+- Understanding how snapshots can help restore a virtual machine to a known state.
+- Organising screenshots and documenting technical work.
+
+## 🛡️ Safe and Responsible Use
+
+This lab is intended for educational purposes and authorised testing. Only test systems and networks that you own or have explicit permission to assess. Keep cybersecurity practice within your own controlled lab or another explicitly authorised environment.
+
+## 📁 Project Structure
+
+The following structure matches the files currently included in the supplied repository archive. The screenshots are in the **repository root**, not in a `screenshots/` subfolder.
+
+```text
+NETWORKWALKS-B084-WK1-PM1-PRANAY-KUMAR/
+├── Readme.md
+├── 01-Screenshot-Kali Linux Login Page.png
+├── 02-Screenshot-virtualbox-vm-configuration.png
+├── 03-Screenshot-kali-linux-snapshot-management.png
+├── 04-Screenshot-kali linux.png
+├── 05-Screenshot-kali-linux-network-configuration.png
+├── 06-Screenshot-network-connection-verification.png
+└── 07-Screenshot-kali-linux-firefox-browser.png.png
+```
+
+**Note:** The names above intentionally preserve the existing screenshot filenames, including spaces and the `.png.png` ending on the seventh image. The image links in this README depend on those exact names. If you rename or move an image, update its link in this file as well.
+
+## 🔗 Tools and Resources
+
+- [Oracle VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
+- [Kali Linux Downloads](https://www.kali.org/get-kali/)
+- [Kali Linux Documentation](https://www.kali.org/docs/)
+
+## 🙏 Acknowledgement
+
+Thank you to **Waqas Karim (CCIE)** and the **Networkwalks team** for their guidance and support as part of the Cybersecurity Program, Batch B084.
+
+---
+
+<div align="center">
+
+**K. Pranay Kumar · Networkwalks · Batch B084 · Week 01**
+
+</div>

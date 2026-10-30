@@ -205,7 +205,6 @@ NETWORKWALKS-B084-WK1-PM1-PRANAY-KUMAR/
 
 - [Oracle VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
 - [Kali Linux Downloads](https://www.kali.org/get-kali/)
-- [Kali Linux Documentation](https://www.kali.org/docs/)
 
 ## 🙏 Acknowledgement
 

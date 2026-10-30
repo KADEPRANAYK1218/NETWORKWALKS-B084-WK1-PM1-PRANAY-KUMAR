@@ -163,7 +163,7 @@ The images below use the **existing filenames in this repository**. Each screens
 
 ### 7. Kali Linux Firefox Browser
 
-![Kali Linux Firefox Browser](07-Screenshot-kali-linux-firefox-browser.png.png)
+![Kali Linux Firefox Browser](07-Screenshot-kali-linux-firefox-browser.png)
 
 *Shows Firefox running inside Kali Linux. This is general desktop evidence, not proof of successful network configuration.*
 
@@ -196,7 +196,7 @@ NETWORKWALKS-B084-WK1-PM1-PRANAY-KUMAR/
 ├── 04-Screenshot-kali linux.png
 ├── 05-Screenshot-kali-linux-network-configuration.png
 ├── 06-Screenshot-network-connection-verification.png
-└── 07-Screenshot-kali-linux-firefox-browser.png.png
+└── 07-Screenshot-kali-linux-firefox-browser.png
 ```
 
 ## 🔗 Tools and Resources

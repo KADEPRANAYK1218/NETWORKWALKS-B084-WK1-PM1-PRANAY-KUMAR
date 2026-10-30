@@ -199,8 +199,6 @@ NETWORKWALKS-B084-WK1-PM1-PRANAY-KUMAR/
 └── 07-Screenshot-kali-linux-firefox-browser.png.png
 ```
 
-**Note:** The names above intentionally preserve the existing screenshot filenames, including spaces and the `.png.png` ending on the seventh image. The image links in this README depend on those exact names. If you rename or move an image, update its link in this file as well.
-
 ## 🔗 Tools and Resources
 
 - [Oracle VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
